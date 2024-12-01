@@ -1,4 +1,9 @@
-import os
+def find_similarity(num: int, a: list):
+    similarity = 0
+    for i in range(len(a)):
+        if a[i] == num:
+            similarity += 1
+    return similarity*num
 
 a = []
 b = []
@@ -21,3 +26,10 @@ for i in range(len(a)):
 
 print(distance)
 #ans is 2113135
+
+similarity = 0
+for i in range(len(a)):
+    ans = find_similarity(a[i], b)
+    similarity += ans
+print(similarity)
+#ans is 19097157
